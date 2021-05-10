@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Ubuntu Mono:size=11:antialias=true";
+static int borderpx = 5;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -98,25 +98,26 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+  /* 8 normal colors */
+  [0] = "#000000", /* black   */
+  [1] = "#ff0000", /* red     */
+  [2] = "#33ff00", /* green   */
+  [3] = "#ffff00", /* yellow  */
+  [4] = "#0066ff", /* blue    */
+  [5] = "#cc00ff", /* magenta */
+  [6] = "#00ffff", /* cyan    */
+  [7] = "#d0d0d0", /* white   */
+
+  /* 8 bright colors */
+  [8]  = "#808080", /* black   */
+  [9]  = "#ff0000", /* red     */
+  [10] = "#33ff00", /* green   */
+  [11] = "#ffff00", /* yellow  */
+  [12] = "#0066ff", /* blue    */
+  [13] = "#cc00ff", /* magenta */
+  [14] = "#00ffff", /* cyan    */
+  [15] = "#ffffff", /* white   */
 
 	[255] = 0,
 
